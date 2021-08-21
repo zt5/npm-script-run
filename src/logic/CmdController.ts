@@ -4,7 +4,6 @@ import Helper from '../common/Helper';
 import Listener from "../common/Listener";
 import { getLogger, Logger, showLog } from '../common/Logger';
 import ViewBar from './ViewBar';
-import * as whichpm from "which-pm";
 export default class CmdController extends Listener {
     private _bar: ViewBar;
     private _scripts: string[];
@@ -40,17 +39,19 @@ export default class CmdController extends Listener {
         showLog();
     }
     private execDebug(scriptName: string) {
-        whichpm(Helper.getCurRootPath())
-            .then(pm => {
-                showLog();
-                vscode.commands.executeCommand(
-                    "extension.js-debug.createDebuggerTerminal",
-                    `${pm.name} run ${scriptName}`,
-                    Helper.getCurRootUri(),
-                    { cwd: Helper.getCurRootPath() }
-                )
-            })
-            .catch(err => this.logger.error(err))
+        let name = "npm";
+        let config = vscode.workspace.getConfiguration("npm");
+        if (config) {
+            const packManager = config.get<string>("packageManager");
+            if (packManager && packManager != "auto") name = packManager;
+        }
+        showLog();
+        vscode.commands.executeCommand(
+            "extension.js-debug.createDebuggerTerminal",
+            `${name} run ${scriptName}`,
+            Helper.getCurRootUri(),
+            { cwd: Helper.getCurRootPath() }
+        )
     }
     public get bar() {
         return this._bar;
