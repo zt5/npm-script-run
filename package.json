@@ -1,0 +1,157 @@
+{
+	"name": "npm-script-run",
+	"displayName": "Npm Script Run",
+	"description": "快速运行Npm脚本命令 Vscode在调试页面中不显示npm脚本",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.59.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.png",
+	"keywords": [
+		"npmscript"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"publisher": "zt5",
+	"repository": "https://github.com/zt5/npm-script-run",
+	"contributes": {
+		"commands": [
+			{
+				"command": "npm-script-run.call",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_0",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_1",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_2",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_3",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_4",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_5",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_6",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_7",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_8",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_9",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_10",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_11",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_12",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_13",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_14",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_15",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_16",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_17",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_18",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			},
+			{
+				"command": "npm-script-run.call_19",
+				"title": "打开Npm Script",
+				"icon": "./images/npm.png"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "npm-script-run.call",
+				"key": "F5",
+				"mac": "F5",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^16.4.13",
+		"@types/vscode": "^1.59.0",
+		"typescript": "^4.3.5",
+		"@typescript-eslint/eslint-plugin": "^4.29.0",
+		"@typescript-eslint/parser": "^4.29.0",
+		"eslint": "^7.32.0",
+		"vsce": "^1.96.1"
+	},
+	"dependencies": {
+		"which-pm": "^2.0.0"
+	}
+}
