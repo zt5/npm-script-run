@@ -2,7 +2,7 @@
 	"name": "npm-script-run",
 	"displayName": "Npm Script Run",
 	"description": "快速运行Npm脚本命令 Vscode在调试页面中不显示npm脚本",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.59.0"
 	},
